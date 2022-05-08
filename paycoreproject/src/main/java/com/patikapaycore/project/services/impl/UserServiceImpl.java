@@ -1,7 +1,7 @@
 package com.patikapaycore.project.services.impl;
 
 import com.patikapaycore.project.models.entities.User;
-import com.patikapaycore.project.controllers.repositories.UserRepository;
+
 import com.patikapaycore.project.services.abstracts.UserService;
 import org.springframework.stereotype.Service;
 
@@ -10,8 +10,8 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
 
-    private final  UserRepository userRepository;
-    public UserServiceImpl(UserRepository userRepository) {
+    private final  com.patikapaycore.project.repositories.UserRepository userRepository;
+    public UserServiceImpl(com.patikapaycore.project.repositories.UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 

@@ -1,7 +1,6 @@
-package com.paycoreandpatika.airportapplication.service.impl.controllers;
+package com.paycoreandpatika.airportapplication.controllers;
 
 import com.paycoreandpatika.airportapplication.service.AirlineCompanyService;
-import com.paycoreandpatika.airportapplication.service.impl.AirlineCompanyServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

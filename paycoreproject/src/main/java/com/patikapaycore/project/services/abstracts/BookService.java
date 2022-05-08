@@ -2,7 +2,7 @@ package com.patikapaycore.project.services.abstracts;
 
 import com.patikapaycore.project.models.dtos.request.BookRequestDto;
 import com.patikapaycore.project.models.dtos.response.BookResponseDto;
-import com.patikapaycore.project.models.entities.Book;
+
 
 import java.util.List;
 

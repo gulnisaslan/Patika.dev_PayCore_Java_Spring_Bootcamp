@@ -1,14 +1,18 @@
 package com.patikapaycore.project.exception;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
+
 import org.springframework.http.HttpStatus;
 
 @Data
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class CustomJwtException extends RuntimeException{
-    private final  String message;
-    private  final HttpStatus httpStatus;
+    private String message;
+    private   HttpStatus httpStatus;
+   
+  
    
 }
 

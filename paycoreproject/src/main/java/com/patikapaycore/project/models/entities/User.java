@@ -1,7 +1,6 @@
 package com.patikapaycore.project.models.entities;
 
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,12 +10,11 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
+
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 import java.util.List;
-import java.util.UUID;
+
 
 @Entity
 @NoArgsConstructor

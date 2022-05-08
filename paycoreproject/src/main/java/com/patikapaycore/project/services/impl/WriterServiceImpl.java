@@ -1,7 +1,7 @@
 package com.patikapaycore.project.services.impl;
 
 import com.patikapaycore.project.models.entities.Writer;
-import com.patikapaycore.project.controllers.repositories.WriterRepository;
+import com.patikapaycore.project.repositories.WriterRepository;
 import com.patikapaycore.project.services.abstracts.WriterService;
 import org.springframework.stereotype.Service;
 

@@ -2,8 +2,7 @@ package com.patikapaycore.project.services.impl;
 
 import com.patikapaycore.project.models.dtos.request.BookTypeRequestDto;
 import com.patikapaycore.project.models.entities.BookType;
-import com.patikapaycore.project.models.mapper.request.BookTypeRequestMapper;
-import com.patikapaycore.project.controllers.repositories.BookTypeRepository;
+
 import com.patikapaycore.project.services.abstracts.BookTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,10 +14,9 @@ import java.util.List;
 public class BookTypeServiceImpl implements BookTypeService {
 
     @Autowired
-    private  BookTypeRepository bookTypeRepository;
+    private  com.patikapaycore.project.repositories.BookTypeRepository bookTypeRepository;
 
-    @Autowired
-    private BookTypeRequestMapper bookTypeRequestMapper;
+  
 
     @Override
     public List<BookType> getAllBookType() {
@@ -34,8 +32,8 @@ public class BookTypeServiceImpl implements BookTypeService {
 
     @Override
     public BookType addBookType(BookTypeRequestDto bookTypeRequestDto) {
-        BookType bookType = bookTypeRequestMapper.ToDto(bookTypeRequestDto);
-        return this.bookTypeRepository.save(bookType);
+      
+        return null;
     }
 
     @Override

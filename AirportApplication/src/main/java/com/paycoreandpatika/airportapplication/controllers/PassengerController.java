@@ -1,4 +1,4 @@
-package com.paycoreandpatika.airportapplication.service.impl.controllers;
+package com.paycoreandpatika.airportapplication.controllers;
 
 import com.paycoreandpatika.airportapplication.service.PassengerService;
 import lombok.RequiredArgsConstructor;

@@ -1,4 +1,4 @@
-package com.paycoreandpatika.airportapplication.service.impl.controllers;
+package com.paycoreandpatika.airportapplication.controllers;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -8,6 +8,8 @@ import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -21,7 +23,7 @@ import java.util.List;
 public class Book {
 
     @Id
-
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private  Integer id;
 
@@ -35,6 +37,7 @@ public class Book {
 
     @NotNull(message="Book name cannot be null.")
     @Column(name = "book_name")
+    @Size(min = 1,max=50)
     private String bookName;
 
 

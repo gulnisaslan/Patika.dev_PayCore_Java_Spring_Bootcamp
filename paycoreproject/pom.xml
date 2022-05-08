@@ -13,10 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>paycoreproject</name>
     <description>paycoreproject</description>
-    <properties>
-        <java.version>1.8</java.version>
-        <mapstruct.version>1.4.1.Final</mapstruct.version>
-    </properties>
+    
     <dependencies>
 <!--        <dependency>-->
 <!--            <groupId>org.springframework.boot</groupId>-->
@@ -90,16 +87,10 @@
         </dependency>
 
         <dependency>
-            <groupId>org.mapstruct</groupId>
-            <artifactId>mapstruct</artifactId>
-            <version>1.4.2.Final</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.mapstruct</groupId>
-            <artifactId>mapstruct-processor</artifactId>
-            <version>1.4.2.Final</version>
-        </dependency>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+            <version>3.0.0</version>
+          </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.auth0/java-jwt -->
 <!--        <dependency>-->

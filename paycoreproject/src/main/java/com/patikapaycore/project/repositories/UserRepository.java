@@ -1,4 +1,4 @@
-package com.patikapaycore.project.controllers.repositories;
+package com.patikapaycore.project.repositories;
 
 import com.patikapaycore.project.models.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
