@@ -1,12 +1,11 @@
-package com.patikapaycore.project.models.dtos.response;
-
+package com.patikapaycore.project.dtos.request;
 
 import lombok.*;
 
-@Data
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Builder
-public class BookTypeResponseDto {
+@Data
+public class BookTypeRequestDto {
     private  String typeName;
 }

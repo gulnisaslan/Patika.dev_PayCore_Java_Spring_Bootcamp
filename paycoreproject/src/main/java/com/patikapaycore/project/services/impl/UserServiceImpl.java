@@ -1,41 +1,54 @@
 package com.patikapaycore.project.services.impl;
 
+import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
+import com.patikapaycore.project.dtos.request.UserRequestDto;
+import com.patikapaycore.project.dtos.response.UserResponseDto;
 import com.patikapaycore.project.models.entities.User;
 
+import com.patikapaycore.project.repositories.UserRepository;
 import com.patikapaycore.project.services.abstracts.UserService;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class UserServiceImpl implements UserService {
 
-    private final  com.patikapaycore.project.repositories.UserRepository userRepository;
-    public UserServiceImpl(com.patikapaycore.project.repositories.UserRepository userRepository) {
+    private final UserRepository userRepository;
+    private final ModelMapper mapper;
+
+     @Autowired
+    public UserServiceImpl(UserRepository userRepository,ModelMapper mapper) {
         this.userRepository = userRepository;
+        this.mapper =mapper;
+
     }
 
 
     @Override
-    public List<User> getAllUsers() {
-        return this.userRepository.findAll();
+    public List<UserResponseDto> getAllUsers() {
+        List<User> allUsers = this.userRepository.findAll();
+        return allUsers.stream()
+                .map(user->mapper.map(user,UserResponseDto.class))
+                .collect(Collectors.toList());
     }
 
     @Override
-    public User getByUserId(Integer id) {
-        return this.userRepository.getById(id);
+    public UserResponseDto getByUserId(Integer id) {
+        User getByUserId = this.userRepository.getById(id);
+        return mapper.map(getByUserId,UserResponseDto.class);
     }
 
     @Override
-    public User addUser(User user) {
-
-        return this.userRepository.save(user);
+    public User getByUserId1(Integer id) {
+        return this.userRepository.findById(id).orElseThrow(()->new EntityNotFoundException());
     }
 
-    @Override
-    public void updateUser(User user) {
-        this.userRepository.save(user);
-    }
 
     @Override
     public boolean deleteUser(Integer id) {
@@ -45,8 +58,10 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User findByUsername(String username) {
-        return this.userRepository.findByUsername(username);
+    public UserResponseDto findByUsername(String username) {
+
+        User getByUsername = this.userRepository.findByUsername(username);
+        return mapper.map(getByUsername,UserResponseDto.class);
     }
 
     @Override
@@ -59,6 +74,24 @@ public class UserServiceImpl implements UserService {
     public void deleteByUsername(String username) {
         this.userRepository.deleteByUsername(username);
 
+    }
+
+
+    @Override
+    public UserResponseDto addUser(UserRequestDto userRequestDto) {
+        User saveUser = this.userRepository.save(mapper.map(userRequestDto, User.class));
+
+        return mapper.map(saveUser, UserResponseDto.class);
+    }
+
+
+   
+
+
+    @Override
+    public UserResponseDto updateUser(Integer userId, UserRequestDto requestDto) {
+        // TODO Auto-generated method stub
+        return null;
     }
 
 

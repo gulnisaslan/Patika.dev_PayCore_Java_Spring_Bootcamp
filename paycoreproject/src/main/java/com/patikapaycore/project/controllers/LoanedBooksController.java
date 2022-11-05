@@ -1,5 +1,7 @@
 package com.patikapaycore.project.controllers;
 
+import com.patikapaycore.project.dtos.request.LoanedBookRequestDto;
+import com.patikapaycore.project.dtos.response.LoanedBookResponseDto;
 import com.patikapaycore.project.models.entities.LoanedBook;
 import com.patikapaycore.project.services.abstracts.LoanedBookService;
 
@@ -34,13 +36,13 @@ public class LoanedBooksController {
 
 
     @GetMapping(value ="getbyloanedid/{id}")
-    public LoanedBook getById(@PathVariable @Min(1) @Param("{id}") Integer id){
+    public LoanedBookResponseDto getById(@PathVariable @Min(1) @Param("{id}") Integer id){
         return this.loanedBookService.getByLoanedBookId(id);
     }
 
     @PostMapping(value ="/createloanedbook",consumes ={"application/json"})
-    public LoanedBook addLonedBook(@Valid @RequestBody int bookId,int userId){
-        return this.loanedBookService.addLoanedBook(bookId,userId);
+    public LoanedBookResponseDto createLoanedBook(@Valid @RequestBody LoanedBookRequestDto loanedBookRequestDto){
+        return this.loanedBookService.addLoanedBook(loanedBookRequestDto);
     }
 
     @PutMapping(value ="/updateloanedbook",consumes ={"application/json"})

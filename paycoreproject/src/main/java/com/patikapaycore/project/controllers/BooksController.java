@@ -1,5 +1,8 @@
 package com.patikapaycore.project.controllers;
 
+
+import com.patikapaycore.project.dtos.request.BookRequestDto;
+import com.patikapaycore.project.dtos.response.BookResponseDto;
 import com.patikapaycore.project.models.entities.Book;
 import com.patikapaycore.project.services.abstracts.BookService;
 
@@ -12,7 +15,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
 import java.util.List;
-import java.util.stream.Collectors;
 
 
 @Validated
@@ -31,10 +33,10 @@ public class BooksController {
 
 
     @GetMapping(value ="/getallbooks")
-   public List<Book> getAllBooks(){
-      return null;// bookService.getAllBooks();
+   public List<BookResponseDto> getAllBooks(){
+      return this.bookService.getAllBooks();
     }
-    //return allPassengers.stream().map(PASSENGER_MAPPER::toDto).collect(Collectors.toList());
+
 
 
    @GetMapping (value ="/getbybookid/{id}")
@@ -43,8 +45,8 @@ public class BooksController {
    }
 
    @PostMapping(value = "/addBook")
-   public Book addBook(Book book){
-        return null;//  this.bookService.addBook(book);
+   public BookResponseDto addBook(@Valid @RequestBody BookRequestDto bookRequestDto){
+        return  this.bookService.addBook(bookRequestDto);
    }
 
     @PutMapping(value ="/updatebook",consumes ={"application/json"})
@@ -54,9 +56,21 @@ public class BooksController {
     }
     @DeleteMapping(value ="/deletebook/{id}")
     public boolean deleteBook(@PathVariable @Min(1) @Param("{id}") Integer id){
-       ///this.bookService.deleteBook(id);
+       this.bookService.deleteBook(id);
        return true;
     }
+
+    @GetMapping(value="/getByWriterName/{writerName}")
+    public List<BookResponseDto> getByWriterName(@RequestBody @Param("{writerName}") String writerName){
+
+        return bookService.findByWriter_WriterName(writerName);
+    }
+//    @GetMapping(value="/getByWriterName/{writerName}")
+//    public List<BookResponseDto> getByBookId(@RequestBody @Param("{writerName}") String writerName){
+//
+//        return bookService.findByWriter_WriterName(writerName);
+//    }
+
 
 
 }

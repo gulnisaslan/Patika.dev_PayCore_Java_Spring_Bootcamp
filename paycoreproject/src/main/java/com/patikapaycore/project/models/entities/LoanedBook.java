@@ -1,8 +1,7 @@
 package com.patikapaycore.project.models.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.patikapaycore.project.models.dtos.response.BookResponseDto;
+import com.patikapaycore.project.dtos.response.BookResponseDto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,11 +10,10 @@ import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Date;
+import java.util.List;
+import java.util.UUID;
 
 
 @Entity
@@ -27,9 +25,8 @@ import java.util.Date;
 public class LoanedBook {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
-    private Integer id;
+    private String id;
 
 //    @NotNull
 //    @Column(name = "user_id")
@@ -41,12 +38,11 @@ public class LoanedBook {
 
    @NotNull
    @Column(name = "loaned_date")
-   @DateTimeFormat(pattern = "dd/MM/yyyy")
-   private LocalDate loanedDate = LocalDate.now();
+   private LocalDate loanedDate;
 
    @NotNull
    @Column(name = "return_date")
-   private LocalDate returnDate = LocalDate.now().plusDays(30);
+   private LocalDate returnDate ;
 
 
 
@@ -57,14 +53,10 @@ public class LoanedBook {
 
    @JsonIgnore
    @ManyToOne(cascade = CascadeType.MERGE,fetch =FetchType.LAZY,targetEntity = Book.class)
-    @JoinColumn(name = "book_id")
-    private  Book book;
+   @JoinColumn(name = "book_id")
+   private Book books;
 
-public void setBook(BookResponseDto byBookId) {
-}
 
-public void setUser(User byUserId) {
-}
 
 }
 

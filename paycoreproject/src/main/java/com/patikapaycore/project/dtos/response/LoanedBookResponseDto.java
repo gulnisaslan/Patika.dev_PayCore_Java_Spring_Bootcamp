@@ -1,4 +1,4 @@
-package com.patikapaycore.project.models.dtos.response;
+package com.patikapaycore.project.dtos.response;
 
 import lombok.*;
 
@@ -10,8 +10,10 @@ import java.time.LocalDate;
 @Builder
 public class LoanedBookResponseDto {
 
-     private  String userFullName;
+
+     private String userFullName;
      private  String bookName;
+     private WriterResponseDto writerName;
      private LocalDate loanedDate;
      private  LocalDate returnDate;
 

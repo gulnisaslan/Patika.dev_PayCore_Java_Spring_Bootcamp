@@ -1,7 +1,8 @@
-package com.patikapaycore.project.models.dtos.request;
+package com.patikapaycore.project.dtos.request;
 
 import lombok.*;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @NoArgsConstructor
@@ -10,10 +11,10 @@ import java.util.Date;
 @Data
 public class UserRequestDto {
     private String firstName;
-    private String lastName;
+    private String surname;
     private String username;
     private String email;
     private String password;
-    private Date birthDate;
+    private LocalDate birthDate;
     private String phoneNumber;
 }

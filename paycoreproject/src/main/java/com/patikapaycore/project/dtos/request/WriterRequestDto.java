@@ -1,12 +1,12 @@
-package com.patikapaycore.project.models.dtos.response;
+package com.patikapaycore.project.dtos.request;
 
 import lombok.*;
 
-@Data
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Builder
-public class WriterResponseDto {
+@Data
+public class WriterRequestDto {
     private String writerName;
     private  String writerSurname;
 }

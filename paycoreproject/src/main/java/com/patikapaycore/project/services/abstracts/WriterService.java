@@ -1,19 +1,22 @@
 package com.patikapaycore.project.services.abstracts;
 
 
+import com.patikapaycore.project.dtos.request.WriterRequestDto;
+import com.patikapaycore.project.dtos.response.WriterResponseDto;
 import com.patikapaycore.project.models.entities.Writer;
 
 import java.util.List;
 
 public interface WriterService {
 
-    List<Writer> getAllWriter();
+    List<WriterResponseDto> getAllWriter();
 
-    Writer getByWriterId(Integer id);
+    WriterResponseDto getByWriterId(Integer id);
+    Writer getByWriterId1(Integer id);
 
-    Writer addWriter(Writer writer);
+    WriterResponseDto addWriter(WriterRequestDto writerRequestDto);
 
-    void updateWriter(Writer writer);
+    void updateWriter(WriterRequestDto writerRequestDto);
 
     boolean deleteWriter(Integer id);
 

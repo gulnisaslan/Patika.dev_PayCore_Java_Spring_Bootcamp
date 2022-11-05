@@ -1,4 +1,4 @@
-package com.patikapaycore.project.models.dtos.request;
+package com.patikapaycore.project.dtos.request;
 
 import lombok.*;
 
@@ -7,9 +7,8 @@ import lombok.*;
 @Builder
 @Data
 public class BookRequestDto {
-    private  String bookTypeName;
-    private  String  writerName;
-    private  String  writerSurname;
+    private  Integer writerId;
+    private  Integer bookTypeId;
     private  String bookName;
     private  String isbnNo;
     private String bookDescription;

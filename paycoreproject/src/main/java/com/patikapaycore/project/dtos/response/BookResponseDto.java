@@ -1,4 +1,7 @@
-package com.patikapaycore.project.models.dtos.response;
+package com.patikapaycore.project.dtos.response;
+
+import com.patikapaycore.project.models.entities.Book;
+import com.patikapaycore.project.models.entities.Writer;
 
 import lombok.*;
 
@@ -9,10 +12,12 @@ import lombok.*;
 public class BookResponseDto {
 
     private  String bookTypeName;
-    private  String  writerName;
-    private  String  writerSurname;
+    private  String writerName;
+    private  String writerLastName;
     private  String bookName;
     private  String isbnNo;
     private String bookDescription;
+
+ 
 
 }

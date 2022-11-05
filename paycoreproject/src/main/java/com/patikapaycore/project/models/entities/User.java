@@ -12,6 +12,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 
 import javax.validation.constraints.NotNull;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -52,9 +53,9 @@ public class User {
 
 
     @NotNull(message = "Birth Date cannot be null. ")
-    @DateTimeFormat(pattern = "dd-MM-yyyy")
+
     @Column(name="birth_date")
-    private Date birthDate;
+    private LocalDate birthDate;
 
     @NotNull(message="Phone number cannot be null.")
     @Column(name="phone_number")

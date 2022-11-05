@@ -1,9 +1,8 @@
 package com.patikapaycore.project.models.entities;
 
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 
 import javax.persistence.*;
@@ -48,18 +47,18 @@ public class Book {
     @Column(name = "book_description")
     private  String bookDescription;
 
-    @JsonIgnore
+ //   @JsonIgnore
     @ManyToOne(cascade = CascadeType.MERGE,fetch = FetchType.LAZY, targetEntity = BookType.class)
     @JoinColumn(name = "book_type_id",referencedColumnName = "id")
     private BookType bookType;
 
-    @JsonIgnore
+   // @JsonIgnore
     @ManyToOne(cascade = CascadeType.MERGE,fetch = FetchType.LAZY, targetEntity = Writer.class)
     @JoinColumn(name = "writer_id",referencedColumnName = "id")
     private Writer writer;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "book",cascade = CascadeType.MERGE,fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "books",cascade = CascadeType.MERGE,fetch = FetchType.LAZY)
     private List<LoanedBook> loanedBooks;
 
 
