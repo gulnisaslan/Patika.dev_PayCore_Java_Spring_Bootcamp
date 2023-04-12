@@ -34,10 +34,7 @@ public class BookTypesController {
     public BookTypeResponseDto addBookType(@Valid @RequestBody BookTypeRequestDto bookType){
         return  this.bookTypeService.addBookType(bookType);
     }
-    @PutMapping(value ="/updatebooktype")
-    public void updateBookType(@Valid @RequestBody BookTypeRequestDto bookType){
-       this.bookTypeService.updateBookType(bookType);
-    }
+   
 
     @DeleteMapping(value ="/deletebooktype/{id}")
     public boolean deleteBookType(@PathVariable @Min((1)) @Param("{id}") Integer id){

@@ -1,6 +1,7 @@
 package com.patikapaycore.project.services.abstracts;
 
 import com.patikapaycore.project.dtos.request.BookRequestDto;
+import com.patikapaycore.project.dtos.request.BookRequestDtoUpdate;
 import com.patikapaycore.project.dtos.response.BookResponseDto;
 import com.patikapaycore.project.models.entities.Book;
 
@@ -15,10 +16,10 @@ public interface BookService {
 
     BookResponseDto addBook(BookRequestDto bookRequestDto);
 
-    void updateBook(BookRequestDto bookRequestDto);
+    BookResponseDto updateBook(BookRequestDtoUpdate bookRequestDtoUpdate);
 
     boolean deleteBook(Integer id);
 
-    List<BookResponseDto> findByWriter_WriterName(String writerName);
+    List<BookResponseDto> findByWriterWriterName(String writerName);
 
 }

@@ -2,7 +2,6 @@ package com.patikapaycore.project.controllers;
 
 import com.patikapaycore.project.dtos.request.UserRequestDto;
 import com.patikapaycore.project.dtos.response.UserResponseDto;
-import com.patikapaycore.project.models.entities.User;
 import com.patikapaycore.project.services.abstracts.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
 import java.util.List;
-import java.util.stream.Collectors;
+
 
 
 @Validated
@@ -35,7 +34,7 @@ public class UsersController {
         return this.userService.getAllUsers();
 
     }
-//return allPassengers.stream().map(PASSENGER_MAPPER::toDto).collect(Collectors.toList());
+
     @GetMapping(value = "/getbyuserid/{id}")
     public UserResponseDto getById(@PathVariable @Min(1) @Param("{id}") Integer id){
         return this.userService.getByUserId(id);
@@ -46,11 +45,7 @@ public class UsersController {
         return this.userService.addUser(userRequestDto);
     }
 
-//    @PutMapping(value = "/updateuser",consumes ={"application/json"})
-//    public void update(@Valid @RequestBody User user){
-//      //  this.userService.updateUser(null);
-//        return;
-//    }
+
 
     @DeleteMapping(value = "/deleteuser/{id}")
     public boolean delete(@PathVariable @Min(1) @Param("{id}") Integer id){

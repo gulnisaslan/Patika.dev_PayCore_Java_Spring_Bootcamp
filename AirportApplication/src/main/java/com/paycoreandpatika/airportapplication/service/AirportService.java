@@ -1,6 +1,6 @@
 package com.paycoreandpatika.airportapplication.service;
 
-import com.paycoreandpatika.airportapplication.models.Airport;
+import com.paycoreandpatika.airportapplication.models.entities.Airport;
 
 import java.util.List;
 

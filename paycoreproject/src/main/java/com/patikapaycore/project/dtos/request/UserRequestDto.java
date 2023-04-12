@@ -3,7 +3,6 @@ package com.patikapaycore.project.dtos.request;
 import lombok.*;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PRIVATE)

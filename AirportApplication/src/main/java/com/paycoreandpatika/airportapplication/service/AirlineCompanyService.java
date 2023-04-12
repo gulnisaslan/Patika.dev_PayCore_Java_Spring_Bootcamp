@@ -1,15 +1,16 @@
 package com.paycoreandpatika.airportapplication.service;
 
-import com.paycoreandpatika.airportapplication.models.AirlineCompany;
-import com.paycoreandpatika.airportapplication.models.Airport;
+import com.paycoreandpatika.airportapplication.models.dtos.AirlineCompanyDto;
+import com.paycoreandpatika.airportapplication.models.entities.AirlineCompany;
 
 import java.util.List;
 
 public interface AirlineCompanyService {
 
-    List<AirlineCompany> getAllAirports();
-    AirlineCompany getById(Integer id);
-    AirlineCompany addAirlineCompany(AirlineCompany airlineCompany);
-    void updateAirlineCompany(AirlineCompany airlineCompany);
+    List<AirlineCompanyDto> getAllAirports();
+    AirlineCompanyDto getById(Integer id);
+    AirlineCompanyDto addAirlineCompany(AirlineCompanyDto airlineCompanyDto);
+    AirlineCompanyDto updateAirlineCompany(AirlineCompany airlineCompanyDto);
     boolean deleteAirlineCompany(Integer id);
+    List<AirlineCompany> getAirlineCompanies();
 }

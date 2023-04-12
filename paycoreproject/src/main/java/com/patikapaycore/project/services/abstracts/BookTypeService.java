@@ -1,6 +1,7 @@
 package com.patikapaycore.project.services.abstracts;
 
 import com.patikapaycore.project.dtos.request.BookTypeRequestDto;
+import com.patikapaycore.project.dtos.request.BookTypeRequestDtoUpdate;
 import com.patikapaycore.project.dtos.response.BookTypeResponseDto;
 import com.patikapaycore.project.models.entities.BookType;
 
@@ -15,7 +16,7 @@ public interface BookTypeService {
 
     BookTypeResponseDto addBookType(BookTypeRequestDto bookTypeRequestDto);
 
-    void updateBookType(BookTypeRequestDto bookTypeRequestDto);
+    void updateBookType(BookTypeRequestDtoUpdate bookTypeRequestDtoUpdate);
 
     boolean deleteBookType(Integer id);
 

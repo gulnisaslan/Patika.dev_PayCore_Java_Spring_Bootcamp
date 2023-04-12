@@ -1,6 +1,6 @@
 package com.patikapaycore.project.services.impl;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
+
 import com.patikapaycore.project.dtos.request.UserRequestDto;
 import com.patikapaycore.project.dtos.response.UserResponseDto;
 import com.patikapaycore.project.models.entities.User;
@@ -46,7 +46,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User getByUserId1(Integer id) {
-        return this.userRepository.findById(id).orElseThrow(()->new EntityNotFoundException());
+        return this.userRepository.findById(id).orElseThrow(EntityNotFoundException::new);
     }
 
 
@@ -90,7 +90,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserResponseDto updateUser(Integer userId, UserRequestDto requestDto) {
-        // TODO Auto-generated method stub
+        
         return null;
     }
 

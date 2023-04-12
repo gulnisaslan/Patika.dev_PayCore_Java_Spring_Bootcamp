@@ -3,7 +3,7 @@ package com.paycoreandpatika.airportapplication.service.impl;
 
 import java.util.List;
 
-import com.paycoreandpatika.airportapplication.models.Flight;
+import com.paycoreandpatika.airportapplication.models.entities.Flight;
 import com.paycoreandpatika.airportapplication.repository.FlightRepository;
 import com.paycoreandpatika.airportapplication.service.FlightService;
 import org.springframework.beans.factory.annotation.Autowired;

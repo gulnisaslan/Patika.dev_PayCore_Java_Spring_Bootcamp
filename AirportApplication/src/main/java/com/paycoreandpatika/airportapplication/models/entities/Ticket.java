@@ -1,4 +1,4 @@
-package com.paycoreandpatika.airportapplication.models;
+package com.paycoreandpatika.airportapplication.models.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,28 +8,23 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
 @Entity
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
-@Table(name="airport")
-public class Airport {
-
+@Table(name="ticket")
+public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
-    private  Integer id;
+    private Integer id;
 
     @NotBlank
-    @Column(name="name")
-    private String name;
+    @Column(name="passenger_id")
+    private Integer passengerId;
 
     @NotBlank
-    @Column(name="address")
-    private String address;
-
-
-
-
+    @Column(name="flight_id")
+    private Integer flightId;
 
 
 }

@@ -10,7 +10,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.EntityExistsException;
+
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -40,7 +40,7 @@ public class WriterServiceImpl implements WriterService {
 
     @Override
     public WriterResponseDto getByWriterId(Integer id) {
-        Writer byId = this.writerRepository.findById(id).orElseThrow(()-> new EntityNotFoundException());
+        Writer byId = this.writerRepository.findById(id).orElseThrow(EntityNotFoundException::new);
         return modelMapper.map(byId,WriterResponseDto.class);
 
 
@@ -48,7 +48,7 @@ public class WriterServiceImpl implements WriterService {
 
     @Override
     public Writer getByWriterId1(Integer id) {
-        return this.writerRepository.findById(id).orElseThrow(()-> new EntityNotFoundException());
+        return this.writerRepository.findById(id).orElseThrow(EntityNotFoundException::new);
     }
 
     @Override

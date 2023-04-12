@@ -1,6 +1,6 @@
 package com.paycoreandpatika.airportapplication.service.impl;
 
-import com.paycoreandpatika.airportapplication.models.Airport;
+import com.paycoreandpatika.airportapplication.models.entities.Airport;
 import com.paycoreandpatika.airportapplication.repository.AirportRepository;
 import com.paycoreandpatika.airportapplication.service.AirportService;
 import org.springframework.beans.factory.annotation.Autowired;

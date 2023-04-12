@@ -1,9 +1,8 @@
 package com.patikapaycore.project.services.impl;
 
 import com.patikapaycore.project.dtos.request.BookRequestDto;
+import com.patikapaycore.project.dtos.request.BookRequestDtoUpdate;
 import com.patikapaycore.project.dtos.response.BookResponseDto;
-import com.patikapaycore.project.dtos.response.BookTypeResponseDto;
-import com.patikapaycore.project.dtos.response.WriterResponseDto;
 import com.patikapaycore.project.models.entities.Book;
 import com.patikapaycore.project.models.entities.BookType;
 import com.patikapaycore.project.models.entities.Writer;
@@ -21,7 +20,6 @@ import java.util.stream.Collectors;
 
 
 @Service
-
 public class BookServiceImpl implements BookService {
 
     private  final BookRepository bookRepository;
@@ -54,17 +52,10 @@ public class BookServiceImpl implements BookService {
     }
 
 
-    @Override
-    public List<BookResponseDto> findByWriter_WriterName(String writerName) {
-        List<Book> byWriter_writerName = bookRepository.findByWriter_WriterName(writerName);
-        return byWriter_writerName.stream()
-                .map(book -> modelMapper.map(book, BookResponseDto.class)).collect(Collectors.toList());
-    }
 
 
-    /* (non-Javadoc)
-     * @see com.patikapaycore.project.services.abstracts.BookService#getByBookId(java.lang.Integer)
-     */
+
+
     @Override
     public BookResponseDto getByBookId(Integer id) {
         Book book = this.bookRepository.findById(id)
@@ -85,23 +76,31 @@ public class BookServiceImpl implements BookService {
                 .build();
 
         Book save = this.bookRepository.save(build);
+
         return modelMapper.map(save,BookResponseDto.class);
-
-
     }
 
 
     // ToDo: Update method was refactoring
-    @Override
-    public void updateBook(BookRequestDto bookRequestDto) {
-        // TODO Auto-generated method stub
-        
-    }
+    
 
     @Override
     public Book getByBookId1(Integer id) {
-        // TODO Auto-generated method stub
+        
         return this.bookRepository.getById(id);
+    }
+
+    @Override
+    public BookResponseDto updateBook(BookRequestDtoUpdate bookRequestDtoUpdate) {
+        
+        throw new UnsupportedOperationException("Unimplemented method 'updateBook'");
+    }
+
+    @Override
+    public List<BookResponseDto> findByWriterWriterName(String writerName) {
+      List<Book> byWriterwriterName = bookRepository.findByWriter_WriterName(writerName);
+        return byWriterwriterName.stream()
+                .map(book -> modelMapper.map(book, BookResponseDto.class)).collect(Collectors.toList());
     }
 }
 

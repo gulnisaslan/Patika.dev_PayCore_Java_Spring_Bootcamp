@@ -1,6 +1,6 @@
 package com.patikapaycore.project.services.impl;
 
-import com.patikapaycore.project.dtos.request.WriterRequestDto;
+
 import com.patikapaycore.project.dtos.response.WriterResponseDto;
 import com.patikapaycore.project.models.entities.Writer;
 import com.patikapaycore.project.repositories.WriterRepository;
@@ -11,13 +11,13 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.mockito.junit.jupiter.MockitoSettings;
 import org.mockito.quality.Strictness;
-import org.mockito.stubbing.OngoingStubbing;
+
 import org.modelmapper.ModelMapper;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
+
 import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.*;

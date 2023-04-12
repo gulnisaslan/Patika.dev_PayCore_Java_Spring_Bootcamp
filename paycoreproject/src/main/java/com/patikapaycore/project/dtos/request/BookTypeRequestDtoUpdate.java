@@ -1,6 +1,5 @@
 package com.patikapaycore.project.dtos.request;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,8 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class LoanedBookRequestDto {
-
-    private  java.util.List<Integer> bookId;
-    private  Integer userId;
+public class BookTypeRequestDtoUpdate  {
+    private Integer id;
+    private String typeName;
 }

@@ -41,7 +41,7 @@ public class BooksController {
 
    @GetMapping (value ="/getbybookid/{id}")
    public Book getByBookId(@PathVariable @Min(1) @Param("{id}") Integer id){
-       return null;// this.bookService.getByBookId(id);
+       return null;
    }
 
    @PostMapping(value = "/addBook")
@@ -49,11 +49,7 @@ public class BooksController {
         return  this.bookService.addBook(bookRequestDto);
    }
 
-    @PutMapping(value ="/updatebook",consumes ={"application/json"})
-    public void updateBook(@Valid @RequestBody Book book){
-      // this.bookService.updateBook(book);
-
-    }
+ 
     @DeleteMapping(value ="/deletebook/{id}")
     public boolean deleteBook(@PathVariable @Min(1) @Param("{id}") Integer id){
        this.bookService.deleteBook(id);
@@ -63,13 +59,9 @@ public class BooksController {
     @GetMapping(value="/getByWriterName/{writerName}")
     public List<BookResponseDto> getByWriterName(@RequestBody @Param("{writerName}") String writerName){
 
-        return bookService.findByWriter_WriterName(writerName);
+        return bookService.findByWriterWriterName(writerName);
     }
-//    @GetMapping(value="/getByWriterName/{writerName}")
-//    public List<BookResponseDto> getByBookId(@RequestBody @Param("{writerName}") String writerName){
-//
-//        return bookService.findByWriter_WriterName(writerName);
-//    }
+
 
 
 

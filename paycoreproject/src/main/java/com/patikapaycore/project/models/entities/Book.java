@@ -9,7 +9,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import java.io.Serializable;
+
 import java.util.List;
 
 
@@ -26,13 +26,7 @@ public class Book {
     @Column(name = "id")
     private  Integer id;
 
-//    @NotNull
-//    @Column(name = "book_type_id")
-//    private Integer bookTypeId;
-//
-//    @NotNull
-//    @Column(name = "writer_id")
-//    private Integer writerId;
+
 
     @NotNull(message="Book name cannot be null.")
     @Column(name = "book_name")

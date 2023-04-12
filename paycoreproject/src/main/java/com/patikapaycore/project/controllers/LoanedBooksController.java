@@ -5,12 +5,12 @@ import com.patikapaycore.project.dtos.response.LoanedBookResponseDto;
 import com.patikapaycore.project.models.entities.LoanedBook;
 import com.patikapaycore.project.services.abstracts.LoanedBookService;
 
-import lombok.RequiredArgsConstructor;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+
 
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
@@ -45,10 +45,7 @@ public class LoanedBooksController {
         return this.loanedBookService.addLoanedBook(loanedBookRequestDto);
     }
 
-    @PutMapping(value ="/updateloanedbook",consumes ={"application/json"})
-    public void updateLoanedBook(@Valid @RequestBody LoanedBook loanedBook){
-        this.loanedBookService.updateLoanedBook(loanedBook);
-    }
+    
 
     @DeleteMapping(value ="/deleteloanedbook/{id}")
     public boolean deleteLoanedBook(@PathVariable @Min(1) @Param("{id}") Integer id){

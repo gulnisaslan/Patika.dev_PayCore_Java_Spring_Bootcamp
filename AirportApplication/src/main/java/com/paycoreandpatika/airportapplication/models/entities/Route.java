@@ -1,4 +1,4 @@
-package com.paycoreandpatika.airportapplication.models;
+package com.paycoreandpatika.airportapplication.models.entities;
 
 
 import lombok.AllArgsConstructor;

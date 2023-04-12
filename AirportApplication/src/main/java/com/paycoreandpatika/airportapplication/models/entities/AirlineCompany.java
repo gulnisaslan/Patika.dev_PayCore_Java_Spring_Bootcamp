@@ -1,4 +1,4 @@
-package com.paycoreandpatika.airportapplication.models;
+package com.paycoreandpatika.airportapplication.models.entities;
 
 import lombok.*;
 
@@ -10,6 +10,7 @@ import javax.validation.constraints.NotBlank;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @Table(name = "airline_company")
 public class AirlineCompany {
 

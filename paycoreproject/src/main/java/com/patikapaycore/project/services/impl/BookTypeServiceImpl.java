@@ -1,6 +1,7 @@
 package com.patikapaycore.project.services.impl;
 
 import com.patikapaycore.project.dtos.request.BookTypeRequestDto;
+import com.patikapaycore.project.dtos.request.BookTypeRequestDtoUpdate;
 import com.patikapaycore.project.dtos.response.BookTypeResponseDto;
 import com.patikapaycore.project.models.entities.BookType;
 
@@ -43,7 +44,7 @@ public class BookTypeServiceImpl implements BookTypeService {
 
     @Override
     public BookType getByBookId1(Integer id) {
-        return this.bookTypeRepository.findById(id).orElseThrow(()->new EntityNotFoundException());
+        return this.bookTypeRepository.findById(id).orElseThrow(EntityNotFoundException::new);
     }
 
     @Override
@@ -51,14 +52,7 @@ public class BookTypeServiceImpl implements BookTypeService {
         BookType booktype = this.bookTypeRepository.save(modelMapper.map(bookTypeRequestDto, BookType.class));
         return modelMapper.map(booktype,BookTypeResponseDto.class);
     }
-    // ToDo: Update method was refactoring
-    @Override
-    public void updateBookType(BookTypeRequestDto bookTypeRequestDto) {
-        this.bookTypeRepository.save(null);
-    }
-
-
-
+   
     @Override
     public boolean deleteBookType(Integer id) {
 
@@ -67,5 +61,17 @@ public class BookTypeServiceImpl implements BookTypeService {
         return true;
     }
 
+    @Override
+    public void updateBookType(BookTypeRequestDtoUpdate bookTypeRequestDtoUpdate) {
+        BookType bookType = this.bookTypeRepository.getById(bookTypeRequestDtoUpdate.getId());
+        
+        bookType.setTypeName(bookTypeRequestDtoUpdate.getTypeName()==null ?
+        bookTypeRequestDtoUpdate.getTypeName():bookType.getTypeName());
 
+        this.bookTypeRepository.save(bookType);
+
+    }
 }
+
+
+
