@@ -67,6 +67,9 @@ public class BookServiceImpl implements BookService {
     public BookResponseDto addBook(BookRequestDto bookRequestDto) {
         BookType byBookId = this.bookTypeService.getByBookId1(bookRequestDto.getBookTypeId());
         Writer byWriterId1 = writerService.getByWriterId1(bookRequestDto.getWriterId());
+
+
+        
         Book build = Book.builder()
                 .bookType(byBookId)
                 .writer(byWriterId1)

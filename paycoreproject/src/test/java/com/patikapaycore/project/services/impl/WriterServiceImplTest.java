@@ -1,9 +1,11 @@
 package com.patikapaycore.project.services.impl;
 
 
+
 import com.patikapaycore.project.dtos.response.WriterResponseDto;
 import com.patikapaycore.project.models.entities.Writer;
 import com.patikapaycore.project.repositories.WriterRepository;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -12,11 +14,13 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.mockito.junit.jupiter.MockitoSettings;
 import org.mockito.quality.Strictness;
 
+
 import org.modelmapper.ModelMapper;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
+
 
 import java.util.stream.Collectors;
 
@@ -95,14 +99,14 @@ class WriterServiceImplTest {
 
     @Test
     void addWriter() {
-//        Writer build = Writer.builder().writerName("Namık").writerSurname("Kemal").build();
-//        WriterRequestDto map = modelMapper.map(build, WriterRequestDto.class);
-//
-////        when(writerRepository.save(build)).thenReturn(true);
-//        when(writerServiceImpl.addWriter(map)).thenReturn(modelMapper.map(map,WriterResponseDto.class));
-//
-//        verify(writerRepository, times(1)).save(build);
-//
+       /*Writer build = Writer.builder().id(1).writerName("Namık").writerSurname("Kemal").build();
+       WriterRequestDto map = modelMapper.map(build, WriterRequestDto.class);
+
+
+       when(writerServiceImpl.addWriter(map)).thenReturn(modelMapper.map(map,WriterResponseDto.class));
+
+      verify(writerRepository, times(1)).save(build);*/
+
 
     }
 
@@ -112,5 +116,14 @@ class WriterServiceImplTest {
 
     @Test
     void deleteWriter() {
+        Writer build1 = Writer
+                .builder()
+                .id(2)
+                .writerName("Necip fazıl" )
+                .writerSurname("kısakurek")
+                .build();
+        when(writerRepository.findById(build1.getId())).thenThrow(new EntityNotFoundException());
+
+
     }
 }

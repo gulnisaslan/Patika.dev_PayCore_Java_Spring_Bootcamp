@@ -12,7 +12,8 @@ public interface LoanedBookService {
 
    LoanedBookResponseDto getByLoanedBookId(Integer id);
 
-   LoanedBookResponseDto addLoanedBook(LoanedBookRequestDto loanedBookRequestDto);
+   LoanedBook addLoanedBook(LoanedBook loanedBook);
+
 
    void updateLoanedBook(LoanedBook loanedBook);
 

@@ -1,9 +1,9 @@
 package com.patikapaycore.project.controllers;
 
 import com.patikapaycore.project.dtos.request.WriterRequestDto;
+import com.patikapaycore.project.dtos.request.WriterUpdateDto;
 import com.patikapaycore.project.dtos.response.WriterResponseDto;
 import com.patikapaycore.project.services.abstracts.WriterService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +20,6 @@ public class WritersController {
 
     private final WriterService writerService;
 
-    @Autowired
     public WritersController(WriterService writerService) {
         this.writerService = writerService;
     }
@@ -42,7 +41,7 @@ public class WritersController {
     }
 
     @PutMapping(value ="/updatewriter",consumes ={"application/json"})
-    public void updateWriter(@Valid @RequestBody WriterRequestDto writer){
+    public void updateWriter(@Valid @RequestBody WriterUpdateDto writer){
         this.writerService.updateWriter(writer);
     }
 

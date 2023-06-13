@@ -1,6 +1,6 @@
 package com.patikapaycore.project.models.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 
 import lombok.AllArgsConstructor;
@@ -39,12 +39,12 @@ public class LoanedBook {
 
 
 
-   @JsonIgnore
+  
    @ManyToOne(cascade = CascadeType.MERGE,fetch =FetchType.LAZY,targetEntity = User.class)
    @JoinColumn(name = "user_id")
    private User user;
 
-   @JsonIgnore
+
    @ManyToMany(cascade = CascadeType.MERGE,fetch =FetchType.LAZY,targetEntity = Book.class)
    @JoinColumn(name = "book_id")
    private List<Book> books;

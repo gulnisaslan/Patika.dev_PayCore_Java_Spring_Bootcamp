@@ -9,7 +9,6 @@ import com.patikapaycore.project.repositories.UserRepository;
 import com.patikapaycore.project.services.abstracts.UserService;
 
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
@@ -22,7 +21,7 @@ public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
     private final ModelMapper mapper;
 
-     @Autowired
+
     public UserServiceImpl(UserRepository userRepository,ModelMapper mapper) {
         this.userRepository = userRepository;
         this.mapper =mapper;

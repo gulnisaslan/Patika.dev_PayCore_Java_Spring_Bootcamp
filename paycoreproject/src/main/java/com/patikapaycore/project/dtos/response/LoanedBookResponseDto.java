@@ -16,7 +16,6 @@ public class LoanedBookResponseDto {
 
      private String userFullName;
      private List<Book> books;
-     private WriterResponseDto writerName;
      private LocalDate loanedDate;
      private  LocalDate returnDate;
 

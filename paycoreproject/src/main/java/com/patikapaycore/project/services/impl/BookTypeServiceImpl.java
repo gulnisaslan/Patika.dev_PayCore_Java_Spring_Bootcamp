@@ -65,12 +65,14 @@ public class BookTypeServiceImpl implements BookTypeService {
     public void updateBookType(BookTypeRequestDtoUpdate bookTypeRequestDtoUpdate) {
         BookType bookType = this.bookTypeRepository.getById(bookTypeRequestDtoUpdate.getId());
         
-        bookType.setTypeName(bookTypeRequestDtoUpdate.getTypeName()==null ?
-        bookTypeRequestDtoUpdate.getTypeName():bookType.getTypeName());
+      bookType.setTypeName(bookTypeRequestDtoUpdate.getTypeName()==null?bookType.getTypeName():bookTypeRequestDtoUpdate.getTypeName());
 
         this.bookTypeRepository.save(bookType);
 
     }
+
+    
+
 }
 
 

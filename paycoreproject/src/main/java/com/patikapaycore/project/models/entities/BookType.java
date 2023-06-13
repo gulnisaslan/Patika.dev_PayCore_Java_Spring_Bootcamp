@@ -2,7 +2,7 @@ package com.patikapaycore.project.models.entities;
 
 import com.fasterxml.jackson.annotation.*;
 import lombok.AllArgsConstructor;
-
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -15,6 +15,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name="book_types")
+@Builder
 public class BookType {
 
     @Id

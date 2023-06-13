@@ -4,7 +4,6 @@ import com.patikapaycore.project.dtos.request.UserRequestDto;
 import com.patikapaycore.project.dtos.response.UserResponseDto;
 import com.patikapaycore.project.services.abstracts.UserService;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -23,7 +22,6 @@ public class UsersController {
     private final UserService userService;
 
 
-    @Autowired
     public UsersController(UserService userService) {
         this.userService = userService;
     }

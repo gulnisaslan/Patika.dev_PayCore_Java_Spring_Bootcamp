@@ -2,6 +2,7 @@ package com.patikapaycore.project.services.abstracts;
 
 
 import com.patikapaycore.project.dtos.request.WriterRequestDto;
+import com.patikapaycore.project.dtos.request.WriterUpdateDto;
 import com.patikapaycore.project.dtos.response.WriterResponseDto;
 import com.patikapaycore.project.models.entities.Writer;
 
@@ -16,7 +17,7 @@ public interface WriterService {
 
     WriterResponseDto addWriter(WriterRequestDto writerRequestDto);
 
-    void updateWriter(WriterRequestDto writerRequestDto);
+    void updateWriter(WriterUpdateDto writerUpdateDto);
 
     boolean deleteWriter(Integer id);
 
