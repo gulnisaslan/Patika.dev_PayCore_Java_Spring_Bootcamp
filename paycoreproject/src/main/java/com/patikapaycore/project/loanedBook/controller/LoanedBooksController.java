@@ -1,8 +1,8 @@
-package com.patikapaycore.project.controllers;
+package com.patikapaycore.project.loanedBook.controller;
 
-import com.patikapaycore.project.dtos.response.LoanedBookResponseDto;
-import com.patikapaycore.project.models.entities.LoanedBook;
-import com.patikapaycore.project.services.abstracts.LoanedBookService;
+import com.patikapaycore.project.loanedBook.model.dto.LoanedBookResponseDto;
+import com.patikapaycore.project.loanedBook.model.dto.entity.LoanedBook;
+import com.patikapaycore.project.loanedBook.service.LoanedBookService;
 
 
 import org.springframework.data.repository.query.Param;

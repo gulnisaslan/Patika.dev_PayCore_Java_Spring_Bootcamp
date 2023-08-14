@@ -1,8 +1,10 @@
-package com.patikapaycore.project.models.entities;
+package com.patikapaycore.project.loanedBook.model.dto.entity;
 
 
 
 
+import com.patikapaycore.project.book.model.entity.Book;
+import com.patikapaycore.project.user.model.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

@@ -1,15 +1,14 @@
-package com.patikapaycore.project.services.impl;
+package com.patikapaycore.project.loanedBook.service;
 
 
-import com.patikapaycore.project.dtos.response.LoanedBookResponseDto;
+import com.patikapaycore.project.loanedBook.model.dto.LoanedBookResponseDto;
 import com.patikapaycore.project.exception.NotFoundException;
-import com.patikapaycore.project.models.entities.Book;
-import com.patikapaycore.project.models.entities.LoanedBook;
-import com.patikapaycore.project.models.entities.User;
-import com.patikapaycore.project.repositories.LoanedBookRepository;
-import com.patikapaycore.project.services.abstracts.BookService;
-import com.patikapaycore.project.services.abstracts.LoanedBookService;
-import com.patikapaycore.project.services.abstracts.UserService;
+import com.patikapaycore.project.book.model.entity.Book;
+import com.patikapaycore.project.loanedBook.model.dto.entity.LoanedBook;
+import com.patikapaycore.project.user.model.entity.User;
+import com.patikapaycore.project.loanedBook.repository.LoanedBookRepository;
+import com.patikapaycore.project.book.service.BookService;
+import com.patikapaycore.project.user.service.UserService;
 
 import org.springframework.stereotype.Service;
 
@@ -21,6 +20,7 @@ import java.util.stream.Collectors;
 
 
 @Service
+
 public class LoanedBookServiceImpl implements LoanedBookService {
     private final LoanedBookRepository loanedBookRepository;
     private final BookService bookService;
@@ -95,8 +95,7 @@ public class LoanedBookServiceImpl implements LoanedBookService {
         return LoanedBookResponseDto.builder()
                 .userFullName(loanedBook.getUser().getFirstname()+" "+loanedBook.getUser().getSurname())
                 .books(loanedBook.getBooks())
-              
-                .loanedDate(loanedBook.getLoanedDate())
+               .loanedDate(loanedBook.getLoanedDate())
                 .loanedDate(loanedBook.getReturnDate())
                 .build();
     }

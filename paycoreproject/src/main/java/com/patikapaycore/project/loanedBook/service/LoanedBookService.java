@@ -1,8 +1,7 @@
-package com.patikapaycore.project.services.abstracts;
+package com.patikapaycore.project.loanedBook.service;
 
-import com.patikapaycore.project.dtos.request.LoanedBookRequestDto;
-import com.patikapaycore.project.dtos.response.LoanedBookResponseDto;
-import com.patikapaycore.project.models.entities.LoanedBook;
+import com.patikapaycore.project.loanedBook.model.dto.LoanedBookResponseDto;
+import com.patikapaycore.project.loanedBook.model.dto.entity.LoanedBook;
 
 import java.util.List;
 

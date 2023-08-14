@@ -1,11 +1,11 @@
-package com.patikapaycore.project.dtos.response;
+package com.patikapaycore.project.loanedBook.model.dto;
 
 import lombok.*;
 
 import java.time.LocalDate;
 import java.util.List;
 
-import com.patikapaycore.project.models.entities.Book;
+import com.patikapaycore.project.book.model.entity.Book;
 
 @Data
 @NoArgsConstructor(access = AccessLevel.PRIVATE)

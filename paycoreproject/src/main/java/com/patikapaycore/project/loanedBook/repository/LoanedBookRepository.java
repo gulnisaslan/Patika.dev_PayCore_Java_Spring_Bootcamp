@@ -1,6 +1,6 @@
-package com.patikapaycore.project.repositories;
+package com.patikapaycore.project.loanedBook.repository;
 
-import com.patikapaycore.project.models.entities.LoanedBook;
+import com.patikapaycore.project.loanedBook.model.dto.entity.LoanedBook;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
