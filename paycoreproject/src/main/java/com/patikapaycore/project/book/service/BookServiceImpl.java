@@ -1,16 +1,15 @@
-package com.patikapaycore.project.services.impl;
+package com.patikapaycore.project.book.service;
 
-import com.patikapaycore.project.dtos.request.BookRequestDto;
-import com.patikapaycore.project.dtos.request.BookRequestDtoUpdate;
-import com.patikapaycore.project.dtos.response.BookResponseDto;
-import com.patikapaycore.project.models.entities.Book;
-import com.patikapaycore.project.models.entities.BookType;
-import com.patikapaycore.project.models.entities.Writer;
-import com.patikapaycore.project.repositories.BookRepository;
-import com.patikapaycore.project.services.abstracts.BookService;
+import com.patikapaycore.project.book.model.dto.BookRequestDto;
+import com.patikapaycore.project.book.model.dto.BookRequestDtoUpdate;
+import com.patikapaycore.project.book.model.dto.BookResponseDto;
+import com.patikapaycore.project.book.model.entity.Book;
+import com.patikapaycore.project.booktype.model.entity.BookType;
+import com.patikapaycore.project.writer.model.entity.Writer;
+import com.patikapaycore.project.book.repository.BookRepository;
 
-import com.patikapaycore.project.services.abstracts.BookTypeService;
-import com.patikapaycore.project.services.abstracts.WriterService;
+import com.patikapaycore.project.booktype.service.BookTypeService;
+import com.patikapaycore.project.writer.service.WriterService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 

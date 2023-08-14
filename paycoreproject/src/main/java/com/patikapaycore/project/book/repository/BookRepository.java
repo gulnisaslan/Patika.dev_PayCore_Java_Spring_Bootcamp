@@ -1,8 +1,8 @@
-package com.patikapaycore.project.repositories;
+package com.patikapaycore.project.book.repository;
 
 
 import org.springframework.stereotype.Repository;
-import com.patikapaycore.project.models.entities.Book;
+import com.patikapaycore.project.book.model.entity.Book;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

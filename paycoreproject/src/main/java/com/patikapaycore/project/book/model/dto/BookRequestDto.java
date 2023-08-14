@@ -1,17 +1,15 @@
-package com.patikapaycore.project.dtos.request;
+package com.patikapaycore.project.book.model.dto;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+
+
+import lombok.*;
 
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Builder
 @Data
-public class BookRequestDtoUpdate {
-    private Integer id;
+public class BookRequestDto {
+
     private  Integer writerId;
     private  Integer bookTypeId;
     private  String bookName;

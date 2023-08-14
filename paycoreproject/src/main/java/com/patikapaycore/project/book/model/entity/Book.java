@@ -1,8 +1,11 @@
-package com.patikapaycore.project.models.entities;
+package com.patikapaycore.project.book.model.entity;
 
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.patikapaycore.project.loanedBook.model.dto.entity.LoanedBook;
+import com.patikapaycore.project.booktype.model.entity.BookType;
+import com.patikapaycore.project.writer.model.entity.Writer;
 import lombok.*;
 
 import javax.persistence.*;

@@ -1,9 +1,9 @@
-package com.patikapaycore.project.services.abstracts;
+package com.patikapaycore.project.book.service;
 
-import com.patikapaycore.project.dtos.request.BookRequestDto;
-import com.patikapaycore.project.dtos.request.BookRequestDtoUpdate;
-import com.patikapaycore.project.dtos.response.BookResponseDto;
-import com.patikapaycore.project.models.entities.Book;
+import com.patikapaycore.project.book.model.dto.BookRequestDto;
+import com.patikapaycore.project.book.model.dto.BookRequestDtoUpdate;
+import com.patikapaycore.project.book.model.dto.BookResponseDto;
+import com.patikapaycore.project.book.model.entity.Book;
 
 
 import java.util.List;

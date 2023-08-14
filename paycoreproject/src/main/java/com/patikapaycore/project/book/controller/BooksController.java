@@ -1,10 +1,10 @@
-package com.patikapaycore.project.controllers;
+package com.patikapaycore.project.book.controller;
 
 
-import com.patikapaycore.project.dtos.request.BookRequestDto;
-import com.patikapaycore.project.dtos.response.BookResponseDto;
-import com.patikapaycore.project.models.entities.Book;
-import com.patikapaycore.project.services.abstracts.BookService;
+import com.patikapaycore.project.book.model.dto.BookRequestDto;
+import com.patikapaycore.project.book.model.dto.BookResponseDto;
+import com.patikapaycore.project.book.model.entity.Book;
+import com.patikapaycore.project.book.service.BookService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
