@@ -1,4 +1,4 @@
-package com.patikapaycore.project.dtos.response;
+package com.patikapaycore.project.user.model.dto;
 
 import java.time.LocalDate;
 

@@ -1,6 +1,6 @@
-package com.patikapaycore.project.repositories;
+package com.patikapaycore.project.user.repository;
 
-import com.patikapaycore.project.models.entities.User;
+import com.patikapaycore.project.user.model.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

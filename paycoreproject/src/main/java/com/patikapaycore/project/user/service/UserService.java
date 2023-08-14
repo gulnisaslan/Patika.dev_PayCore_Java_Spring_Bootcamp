@@ -1,8 +1,8 @@
-package com.patikapaycore.project.services.abstracts;
+package com.patikapaycore.project.user.service;
 
-import com.patikapaycore.project.dtos.request.UserRequestDto;
-import com.patikapaycore.project.dtos.response.UserResponseDto;
-import com.patikapaycore.project.models.entities.User;
+import com.patikapaycore.project.user.model.dto.UserRequestDto;
+import com.patikapaycore.project.user.model.dto.UserResponseDto;
+import com.patikapaycore.project.user.model.entity.User;
 
 import java.util.List;
 

@@ -1,7 +1,8 @@
-package com.patikapaycore.project.models.entities;
+package com.patikapaycore.project.user.model.entity;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.patikapaycore.project.loanedBook.model.dto.entity.LoanedBook;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

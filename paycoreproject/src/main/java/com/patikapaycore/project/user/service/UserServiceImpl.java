@@ -1,12 +1,11 @@
-package com.patikapaycore.project.services.impl;
+package com.patikapaycore.project.user.service;
 
 
-import com.patikapaycore.project.dtos.request.UserRequestDto;
-import com.patikapaycore.project.dtos.response.UserResponseDto;
-import com.patikapaycore.project.models.entities.User;
+import com.patikapaycore.project.user.model.dto.UserRequestDto;
+import com.patikapaycore.project.user.model.dto.UserResponseDto;
+import com.patikapaycore.project.user.model.entity.User;
 
-import com.patikapaycore.project.repositories.UserRepository;
-import com.patikapaycore.project.services.abstracts.UserService;
+import com.patikapaycore.project.user.repository.UserRepository;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;

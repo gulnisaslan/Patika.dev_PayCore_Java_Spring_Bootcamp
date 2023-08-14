@@ -1,8 +1,8 @@
-package com.patikapaycore.project.controllers;
+package com.patikapaycore.project.user.controller;
 
-import com.patikapaycore.project.dtos.request.UserRequestDto;
-import com.patikapaycore.project.dtos.response.UserResponseDto;
-import com.patikapaycore.project.services.abstracts.UserService;
+import com.patikapaycore.project.user.model.dto.UserRequestDto;
+import com.patikapaycore.project.user.model.dto.UserResponseDto;
+import com.patikapaycore.project.user.service.UserService;
 
 import org.springframework.data.repository.query.Param;
 import org.springframework.validation.annotation.Validated;
