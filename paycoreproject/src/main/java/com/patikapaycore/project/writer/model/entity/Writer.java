@@ -1,9 +1,10 @@
-package com.patikapaycore.project.models.entities;
+package com.patikapaycore.project.writer.model.entity;
 
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import com.patikapaycore.project.models.entities.Book;
 import lombok.*;
 
 import javax.persistence.Column;

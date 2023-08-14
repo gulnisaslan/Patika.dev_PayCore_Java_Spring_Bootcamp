@@ -1,12 +1,11 @@
-package com.patikapaycore.project.services.impl;
+package com.patikapaycore.project.writer.service;
 
 
-import com.patikapaycore.project.dtos.request.WriterRequestDto;
-import com.patikapaycore.project.dtos.request.WriterUpdateDto;
-import com.patikapaycore.project.dtos.response.WriterResponseDto;
-import com.patikapaycore.project.models.entities.Writer;
-import com.patikapaycore.project.repositories.WriterRepository;
-import com.patikapaycore.project.services.abstracts.WriterService;
+import com.patikapaycore.project.writer.model.dto.WriterRequestDto;
+import com.patikapaycore.project.writer.model.dto.WriterUpdateDto;
+import com.patikapaycore.project.writer.model.dto.WriterResponseDto;
+import com.patikapaycore.project.writer.model.entity.Writer;
+import com.patikapaycore.project.writer.repository.WriterRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 

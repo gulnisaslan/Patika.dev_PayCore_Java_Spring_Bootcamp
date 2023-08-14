@@ -1,9 +1,9 @@
-package com.patikapaycore.project.controllers;
+package com.patikapaycore.project.writer.controller;
 
-import com.patikapaycore.project.dtos.request.WriterRequestDto;
-import com.patikapaycore.project.dtos.request.WriterUpdateDto;
-import com.patikapaycore.project.dtos.response.WriterResponseDto;
-import com.patikapaycore.project.services.abstracts.WriterService;
+import com.patikapaycore.project.writer.model.dto.WriterRequestDto;
+import com.patikapaycore.project.writer.model.dto.WriterUpdateDto;
+import com.patikapaycore.project.writer.model.dto.WriterResponseDto;
+import com.patikapaycore.project.writer.service.WriterService;
 import org.springframework.data.repository.query.Param;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;

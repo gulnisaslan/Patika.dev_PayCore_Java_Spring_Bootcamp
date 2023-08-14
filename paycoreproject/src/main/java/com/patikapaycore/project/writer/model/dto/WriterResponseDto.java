@@ -1,6 +1,6 @@
-package com.patikapaycore.project.dtos.response;
+package com.patikapaycore.project.writer.model.dto;
 
-import com.patikapaycore.project.models.entities.Writer;
+import com.patikapaycore.project.writer.model.entity.Writer;
 
 import lombok.*;
 
