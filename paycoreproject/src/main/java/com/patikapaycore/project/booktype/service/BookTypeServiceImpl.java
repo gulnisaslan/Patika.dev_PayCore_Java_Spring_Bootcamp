@@ -1,12 +1,11 @@
-package com.patikapaycore.project.services.impl;
+package com.patikapaycore.project.booktype.service;
 
-import com.patikapaycore.project.dtos.request.BookTypeRequestDto;
-import com.patikapaycore.project.dtos.request.BookTypeRequestDtoUpdate;
-import com.patikapaycore.project.dtos.response.BookTypeResponseDto;
-import com.patikapaycore.project.models.entities.BookType;
+import com.patikapaycore.project.booktype.model.dto.BookTypeRequestDto;
+import com.patikapaycore.project.booktype.model.dto.BookTypeRequestDtoUpdate;
+import com.patikapaycore.project.booktype.model.dto.BookTypeResponseDto;
+import com.patikapaycore.project.booktype.model.entity.BookType;
 
-import com.patikapaycore.project.repositories.BookTypeRepository;
-import com.patikapaycore.project.services.abstracts.BookTypeService;
+import com.patikapaycore.project.booktype.repository.BookTypeRepository;
 
 import org.modelmapper.ModelMapper;
 
@@ -20,7 +19,7 @@ import java.util.stream.Collectors;
 
 public class BookTypeServiceImpl implements BookTypeService {
 
-    private final com.patikapaycore.project.repositories.BookTypeRepository bookTypeRepository;
+    private final BookTypeRepository bookTypeRepository;
     private final ModelMapper modelMapper;
 
     public BookTypeServiceImpl(BookTypeRepository bookTypeRepository, ModelMapper modelMapper) {

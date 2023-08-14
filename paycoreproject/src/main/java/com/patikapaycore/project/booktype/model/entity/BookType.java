@@ -1,6 +1,7 @@
-package com.patikapaycore.project.models.entities;
+package com.patikapaycore.project.booktype.model.entity;
 
 import com.fasterxml.jackson.annotation.*;
+import com.patikapaycore.project.book.model.entity.Book;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

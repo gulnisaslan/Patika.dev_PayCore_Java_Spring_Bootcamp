@@ -1,4 +1,4 @@
-package com.patikapaycore.project.dtos.request;
+package com.patikapaycore.project.booktype.model.dto;
 
 import lombok.*;
 
